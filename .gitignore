@@ -8,3 +8,4 @@ log
 target
 /logs/labrepl.log
 .lein-failures
+.lein-repl-history
