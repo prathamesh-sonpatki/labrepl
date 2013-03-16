@@ -1,15 +1,20 @@
 (ns student.dialect
   (:require [clojure.string :as str])
-)
+  )
 
 (defn canadianize
   "Appends ',eh' at the end of string"
-  [sentence]
-  (str/replace sentence #"\.$" ",eh")
-)
+  [word]
+  (str/replace word #"\.$" ",eh")
+  )
 
 (defn marathi
   "Appends 'Namaskar!' at the end"
-  [sentence]
-  (str sentence "Namskar!")
-)
+  [word]
+  (str word "Namskar!")
+  )
+
+(defn pig-latinize
+  [word]
+  (str/replace word #"^([^aeiou]*)(.*)$" "$2$1ay")
+  )
